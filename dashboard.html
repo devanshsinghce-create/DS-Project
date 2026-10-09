@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Student exam scores</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef1f4;--panel:#fff;--ink:#1c2733;--muted:#566474;--rule:#d3d9e0;--blue:#2f5d8a;--pen:#b8322a;--soft:#e3e9f0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181d;--panel:#1b2129;--ink:#e4e8ec;--muted:#98a4b1;--rule:#2d3640;--blue:#7ea6d6;--pen:#e0766b;--soft:#243040}}
+:root[data-theme="dark"]{--bg:#14181d;--panel:#1b2129;--ink:#e4e8ec;--muted:#98a4b1;--rule:#2d3640;--blue:#7ea6d6;--pen:#e0766b;--soft:#243040}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:960px;margin:0 auto;padding:40px 20px 72px}
+h1{font-size:2.3rem;line-height:1.15;margin:0 0 10px;letter-spacing:-.01em}
+h2{font-size:1.45rem;margin:0 0 6px;letter-spacing:-.005em}
+p{margin:0 0 12px;max-width:68ch}
+.lede{color:var(--muted);font-size:1.08rem}
+section{margin-top:56px;padding-top:28px;border-top:1px solid var(--rule)}
+.sub{color:var(--muted);margin-bottom:20px}
+.facts{display:flex;flex-wrap:wrap;gap:6px 32px;margin-top:22px}
+.facts div{min-width:120px}
+.facts b{display:block;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.facts span{color:var(--muted);font-size:.92rem}
+.log{border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:200px 1fr 1fr;gap:4px 20px;padding:12px 0;border-bottom:1px solid var(--rule)}
+.row b{font-weight:600}
+.row small{display:none;color:var(--muted)}
+.plots{display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:start}
+.panel{background:var(--panel);border:1px solid var(--rule);border-radius:4px;padding:16px}
+svg text{fill:var(--muted);font:12px "Source Sans 3",system-ui,sans-serif}
+.bars div.b{display:grid;grid-template-columns:150px 1fr 48px;gap:10px;align-items:center;margin:8px 0;font-size:.95rem}
+.track{height:14px;background:var(--soft);border-radius:2px;overflow:hidden}
+.fill{height:100%;background:var(--blue)}
+.val{text-align:right;font-variant-numeric:tabular-nums}
+.seg{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
+.seg button{font:inherit;font-size:.92rem;padding:5px 11px;border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:3px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+table{border-collapse:collapse;width:100%;max-width:560px;font-variant-numeric:tabular-nums}
+th,td{text-align:right;padding:8px 10px;border-bottom:1px solid var(--rule)}
+th:first-child,td:first-child{text-align:left;padding-left:0}
+th{font-weight:600;border-bottom:1px solid var(--ink)}
+tr.best td{font-weight:700}
+.est{display:grid;grid-template-columns:1fr 280px;gap:40px;align-items:start}
+.field{margin-bottom:16px}
+.field label{display:flex;justify-content:space-between;font-weight:600;margin-bottom:4px}
+.field output{font-weight:400;font-variant-numeric:tabular-nums;color:var(--muted)}
+input[type=range]{width:100%;accent-color:var(--blue)}
+select{font:inherit;width:100%;padding:7px 8px;background:var(--panel);color:var(--ink);border:1px solid var(--rule);border-radius:3px}
+.result{position:sticky;top:calc(16px + env(safe-area-inset-top,0px));text-align:center}
+.result svg{width:100%;max-width:260px;height:auto;overflow:visible}
+.result .num{fill:var(--ink);font:700 46px "Source Sans 3",system-ui,sans-serif}
+.result path{fill:none;stroke:var(--pen);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+.result p{color:var(--muted);font-size:.93rem;margin:6px auto}
+.note{color:var(--muted);font-size:.93rem;margin-top:14px}
+@media (max-width:760px){
+ h1{font-size:1.9rem}
+ .plots,.est{grid-template-columns:1fr;gap:28px}
+ .row{grid-template-columns:1fr}
+ .row small{display:inline}
+ .bars div.b{grid-template-columns:110px 1fr 44px}
+ .result{position:static}
+}
+</style>
+</head>
+<body>
+<main>
+<h1>What goes with a higher exam score?</h1>
+<p class="lede" id="lede"></p>
+<div class="facts" id="facts"></div>
+
+<section>
+<h2>Cleaning the raw file</h2>
+<p class="sub">Every problem below was counted by the program while it cleaned the data.</p>
+<div class="log" id="log"></div>
+</section>
+
+<section>
+<h2>Which factors move with the final score</h2>
+<p class="sub" id="plotsub"></p>
+<div class="plots">
+  <div class="panel"><svg id="scatter" viewBox="0 0 520 330" width="100%" role="img" aria-label="Scatter plot of weekly study hours against final score with a fitted line"></svg></div>
+  <div>
+    <p style="margin-bottom:8px"><b>Correlation with final score</b></p>
+    <div class="bars" id="corr"></div>
+  </div>
+</div>
+<div style="margin-top:32px">
+  <p style="margin-bottom:8px"><b>Average final score by group</b></p>
+  <div class="seg" id="seg"></div>
+  <div class="bars" id="groupbars"></div>
+</div>
+</section>
+
+<section>
+<h2>How well the models predict</h2>
+<p class="sub" id="modelsub"></p>
+<table id="models"></table>
+</section>
+
+<section>
+<h2>Estimate a score</h2>
+<p class="sub">Uses the linear regression weights from the analysis. Sliders stay inside the ranges found in the data.</p>
+<div class="est">
+  <div id="form"></div>
+  <div class="result" aria-live="polite">
+    <svg viewBox="0 0 190 110" role="img" aria-label="Estimated score">
+      <path d="M26 58 C18 24 80 6 122 14 C164 22 182 54 150 76 C118 98 44 96 22 66 C10 50 26 32 50 24"/>
+      <text class="num" id="estnum" x="95" y="68" text-anchor="middle">0</text>
+    </svg>
+    <p id="esttext"></p>
+  </div>
+</div>
+<p class="note">This is an estimate from patterns in a simulated practice dataset. It is not a forecast for any real student.</p>
+</section>
+</main>
+
+<script>
+const R = {"rows_raw":534,"rows_clean":512,"cols_raw":12,"log":[{"step":"Category labels","found":"labels in use per column: gender 10, parent education 11, internet access 8, private tuition 8, area 4","action":"mapped to consistent labels: gender 2, parent education 3, internet access 2, private tuition 2, area 2"},{"step":"Units inside cells","found":"194 cells such as '78%', '14.3 hrs', '16 yrs'","action":"removed the unit text and converted the columns to numbers"},{"step":"Duplicate rows","found":"14 fully repeated rows","action":"kept the first copy of each"},{"step":"Final score","found":"8 rows missing or outside 0 to 100","action":"dropped these rows (the target should not be guessed)"},{"step":"Range check: study_hours_week","found":"4 values outside 0 to 60","action":"set to missing, filled in the next step"},{"step":"Range check: attendance","found":"3 values outside 0 to 100","action":"set to missing, filled in the next step"},{"step":"Range check: sleep_hours","found":"3 values outside 3 to 12","action":"set to missing, filled in the next step"},{"step":"Range check: previous_score","found":"2 values outside 0 to 100","action":"set to missing, filled in the next step"},{"step":"Missing values","found":"173 empty cells in 8 columns","action":"numeric columns filled with the median, text columns with the most common label"},{"step":"IQR outlier check","found":"study_hours_week: 9, attendance: 3, sleep_hours: 8, previous_score: 3, final_score: 2","action":"kept; these are plausible values, not typing errors"}],"missing_raw":{"attendance":46,"study_hours_week":30,"sleep_hours":27,"previous_score":18,"parent_education":15,"age":14,"gender":12,"internet_access":10,"final_score":6},"iqr":[{"column":"study_hours_week","flagged":9},{"column":"attendance","flagged":3},{"column":"sleep_hours","flagged":8},{"column":"previous_score","flagged":3},{"column":"final_score","flagged":2}],"corr_final":{"age":-0.0,"study_hours_week":0.4,"attendance":0.21,"sleep_hours":0.14,"previous_score":0.61},"groups":{"study":[{"label":"Low (up to 7 h)","n":85,"mean":65.5},{"label":"Medium (7 to 14 h)","n":309,"mean":71.0},{"label":"High (over 14 h)","n":118,"mean":76.7}],"attendance":[{"label":"Below 70%","n":65,"mean":67.4},{"label":"70 to 85%","n":274,"mean":70.9},{"label":"Above 85%","n":173,"mean":73.7}],"parent":[{"label":"School","n":190,"mean":70.4},{"label":"Graduate","n":219,"mean":71.8},{"label":"Postgraduate","n":103,"mean":72.3}],"tuition":[{"label":"No","n":309,"mean":70.5},{"label":"Yes","n":203,"mean":72.8}],"internet":[{"label":"No","n":114,"mean":69.6},{"label":"Yes","n":398,"mean":71.9}],"gender":[{"label":"Female","n":239,"mean":72.0},{"label":"Male","n":273,"mean":70.9}],"area":[{"label":"Rural","n":205,"mean":71.3},{"label":"Urban","n":307,"mean":71.5}]},"pivot":{"Low (up to 7 h)":{"No":64.5,"Yes":67.0},"Medium (7 to 14 h)":{"No":69.8,"Yes":73.0},"High (over 14 h)":{"No":76.7,"Yes":76.7}},"sleep":{"(0.0, 5.5]":65.6,"(5.5, 6.5]":70.0,"(6.5, 7.5]":72.9,"(7.5, 8.5]":72.8,"(8.5, 12.0]":70.1},"grades":{"Fail":0,"Pass":64,"Merit":246,"Distinction":202},"models":[{"model":"Mean baseline","mae":8.13,"rmse":10.05,"r2":0.0},{"model":"Linear regression","mae":4.74,"rmse":6.16,"r2":0.622},{"model":"Random forest","mae":5.03,"rmse":6.4,"r2":0.592}],"cv_r2":[0.661,0.612,0.608,0.638,0.729],"cv_mean":0.65,"coef":{"study_hours_week":1.0193,"attendance":0.176,"sleep_gap":-2.9953,"previous_score":0.4825,"private_tuition":2.2582,"internet_access":2.0758,"parent_graduate":0.613,"parent_postgraduate":1.2071},"intercept":14.741224538789467,"std_effect":{"study_hours_week":4.27,"attendance":1.74,"sleep_gap":-2.05,"previous_score":6.43,"private_tuition":1.11,"internet_access":0.86,"parent_graduate":0.3,"parent_postgraduate":0.48},"rf_importance":{"study_hours_week":0.28,"attendance":0.076,"sleep_gap":0.079,"previous_score":0.538,"private_tuition":0.012,"internet_access":0.003,"parent_graduate":0.008,"parent_postgraduate":0.004},"ranges":{"study_hours_week":[0.5,24.9,11.1],"attendance":[53.0,100.0,82.0],"sleep_hours":[4.0,9.9,7.0],"previous_score":[23.0,98.0,63.0]},"points":[[14.3,65],[6.3,74],[5.5,53],[6.4,67],[12.5,59],[13.2,62],[12.8,77],[6.3,53],[13.0,85],[8.4,62],[2.7,72],[6.2,66],[6.8,54],[7.4,62],[11.1,82],[11.6,82],[11.1,78],[13.4,76],[13.8,73],[18.0,87],[13.8,82],[9.4,72],[19.6,95],[13.5,79],[9.1,73],[11.1,76],[17.5,89],[12.4,89],[1.4,72],[7.9,66],[7.6,61],[15.3,77],[9.0,78],[10.8,80],[11.1,55],[13.6,69],[11.2,58],[10.7,85],[18.1,82],[10.2,66],[11.1,82],[2.5,73],[12.4,71],[9.7,50],[7.4,66],[13.4,67],[19.1,79],[22.8,85],[7.3,64],[11.1,67],[12.9,90],[10.8,72],[20.2,64],[11.6,72],[13.7,70],[8.0,67],[11.1,66],[4.0,66],[2.3,77],[14.3,75],[10.0,69],[11.7,99],[3.5,66],[11.1,68],[8.4,78],[10.0,65],[7.7,72],[14.5,76],[17.0,71],[10.5,62],[3.6,59],[16.4,68],[14.2,72],[13.9,78],[4.9,64],[6.4,73],[12.4,64],[11.7,81],[9.6,70],[10.2,82],[6.7,68],[19.9,78],[10.4,71],[9.2,53],[13.8,73],[9.6,73],[5.1,63],[8.9,72],[11.1,73],[15.4,82],[12.7,79],[14.2,66],[10.7,82],[6.8,60],[15.7,61],[18.4,82],[10.2,81],[4.2,63],[13.0,79],[11.1,87],[10.0,65],[11.5,58],[18.2,84],[7.1,57],[19.2,77],[14.2,80],[6.6,76],[6.8,44],[10.0,75],[10.4,89],[9.2,70],[12.3,71],[14.2,66],[12.4,74],[9.8,72],[11.3,72],[6.7,59],[14.5,77],[8.6,62],[11.5,72],[0.5,55],[15.4,77],[7.6,58],[8.2,80],[10.6,84],[9.0,87],[11.8,77],[13.3,83],[9.9,67],[11.1,64],[8.1,69],[15.2,89],[7.3,75],[9.7,70],[9.6,82],[8.8,65],[13.5,69],[8.0,61],[6.9,61],[9.8,81],[11.1,70],[11.3,59],[9.0,75],[10.3,83],[11.8,69],[1.9,43],[3.9,63],[8.0,79],[13.8,57],[15.2,80],[11.1,81],[2.5,68],[12.0,75],[16.8,83],[14.7,72],[14.4,80],[4.4,78],[7.6,65],[12.8,64],[20.1,81],[19.5,70],[10.8,67],[14.4,63],[11.1,91],[14.0,66],[5.0,71],[7.6,67],[10.7,68],[12.4,83],[5.2,72],[13.0,68],[11.1,67],[8.7,77],[17.2,82],[5.7,72],[10.7,60],[5.0,63],[9.5,55],[15.5,78],[8.8,60],[15.7,51],[8.8,80],[10.3,65],[10.7,72],[16.0,75],[14.8,76],[3.9,63],[14.2,82],[9.7,70],[5.5,74],[13.0,72],[11.2,55],[7.3,68],[11.2,71],[10.7,62],[10.0,71],[11.1,59],[3.0,54],[15.2,79],[22.2,72],[9.3,88],[7.0,69],[8.2,51],[3.9,72],[5.1,74],[5.6,54],[10.7,60],[11.3,69],[9.1,47],[14.5,81],[11.6,72],[10.2,79],[5.3,72],[6.9,73],[9.8,54],[9.6,70],[14.9,73],[5.6,71],[7.8,65],[7.7,81],[14.2,71],[16.1,74],[17.1,82],[2.7,78],[6.9,76],[8.7,76],[9.4,60],[10.1,80],[10.8,77],[11.4,81],[6.3,69],[15.1,84],[17.2,83],[13.7,65],[13.8,64],[17.6,77],[18.5,67],[5.3,71],[8.8,59],[9.3,71],[14.5,74],[9.8,57],[13.6,78],[3.2,54],[14.1,66],[9.3,75],[15.9,74],[13.5,69],[5.4,74],[12.6,90],[11.9,69],[13.6,85],[11.5,66],[8.1,64],[13.2,85],[6.8,74],[9.6,74],[6.0,60],[13.5,68],[8.3,62],[13.4,64],[8.2,77],[11.1,65],[13.2,88],[14.9,58],[12.2,59],[13.3,72],[9.8,58],[10.2,64],[11.8,78],[12.7,74],[13.6,76],[12.5,73],[13.2,68],[8.6,77],[19.4,74],[4.4,63],[8.1,71],[17.1,64],[10.7,75],[11.1,88],[9.7,54],[11.3,84],[12.6,57],[12.2,74],[9.3,70],[14.6,83],[9.6,81],[11.3,71],[15.0,88],[13.1,79],[13.1,88],[11.1,51],[12.9,89],[6.9,61],[4.4,78],[3.7,49],[17.3,67],[4.8,50],[15.9,71],[15.4,77],[17.1,73],[3.8,51],[16.4,90],[14.6,63],[10.2,58],[11.1,85],[11.1,50],[13.1,80],[15.8,79],[17.3,82],[9.1,56],[9.8,68],[8.7,67],[21.9,81],[8.9,68],[11.1,76],[13.7,57],[13.9,68],[14.5,74],[11.1,76],[14.8,75],[7.8,77],[9.7,75],[11.1,69],[12.1,61],[11.1,75],[4.7,62],[10.8,75],[24.9,86],[12.6,76],[13.2,67],[12.8,66],[3.2,61],[2.6,68],[12.8,80],[10.0,75],[17.4,73],[16.5,72],[13.4,72],[11.1,66],[10.5,73],[11.0,74],[17.1,74],[12.0,83],[8.8,68],[11.1,68],[18.5,79],[23.8,89],[12.3,70],[12.6,78],[15.4,72],[9.9,79],[4.9,61],[11.4,55],[23.7,81],[6.9,78],[13.9,88],[10.6,79],[11.0,60],[4.6,76],[4.0,61],[4.1,57],[18.5,84],[10.2,76],[3.3,71],[11.1,71],[12.1,80],[10.3,64],[6.2,72],[11.3,61],[13.2,62],[16.2,82],[14.7,67],[12.3,87],[3.8,55],[9.5,76],[23.6,84],[8.0,77],[10.8,73],[11.5,84],[7.7,76],[10.5,89],[10.7,69],[12.1,68],[11.2,89],[15.7,89],[20.1,83],[2.5,49],[15.9,86],[16.9,62],[15.7,79],[9.9,69],[8.2,86],[9.7,75],[11.1,79],[15.9,83],[16.9,88],[11.1,59],[15.2,58],[12.0,63],[7.4,67],[12.1,74],[11.1,65],[14.5,89],[5.2,64],[18.6,75],[11.1,76],[12.2,75],[8.6,69],[16.5,72],[4.7,74],[15.4,84],[17.6,74],[6.1,70],[12.6,57],[7.7,71],[8.4,65],[5.0,69],[13.4,67],[9.5,51],[9.4,52],[11.2,82],[5.2,69],[7.9,73],[8.9,64],[14.9,78],[2.5,58],[9.3,79],[10.2,42],[5.0,69],[15.8,59],[15.1,76],[10.0,81],[18.0,75],[10.9,86],[11.5,65],[18.0,88],[5.5,82],[8.1,77],[16.9,64],[8.5,59],[12.7,74],[9.9,72],[13.5,65],[14.2,63],[7.5,58],[11.7,66],[9.6,75],[11.6,79],[9.9,70],[15.2,75],[11.1,78],[19.7,68],[5.0,60],[11.1,55],[19.0,85],[17.6,80],[12.5,62],[12.2,85],[15.2,81],[11.6,53],[11.4,66],[11.0,70],[9.9,60],[13.7,84],[14.2,61],[14.8,82],[13.0,64],[13.7,75],[7.5,71],[10.8,71],[14.2,76],[10.6,65],[8.3,62],[10.0,64],[9.5,60],[17.4,53],[19.9,88],[6.3,61],[10.2,82],[11.1,72],[16.3,90],[11.7,67],[14.9,83],[13.0,81],[11.1,46],[9.7,73],[15.2,87],[11.3,70],[3.9,55],[11.1,86],[7.2,57],[16.5,78],[11.8,71],[15.0,87],[11.1,66],[3.3,77],[6.7,73],[7.7,71],[16.8,96],[9.0,79],[4.1,49],[4.0,72],[17.2,81],[7.0,66],[11.4,65],[12.2,83],[12.6,79],[0.5,79],[13.7,81],[11.1,60]],"train_n":409,"test_n":103};
+const $ = id => document.getElementById(id);
+const fmt = (v, d = 1) => Number(v).toFixed(d);
+const names = {study_hours_week:"Study hours per week", attendance:"Attendance", sleep_hours:"Sleep hours", previous_score:"Previous score", age:"Age", private_tuition:"Private tuition", internet_access:"Internet access", sleep_gap:"Hours away from 7.5 sleep", parent_graduate:"Parent: graduate", parent_postgraduate:"Parent: postgraduate"};
+
+$("lede").textContent = `A cleaned survey of ${R.rows_clean} students, used to see how study habits, attendance and background relate to the final mark. The data is simulated for practice.`;
+$("facts").innerHTML = [
+  [R.rows_raw, "rows in the raw file"],
+  [R.rows_clean, "rows after cleaning"],
+  [fmt(R.models[1].r2, 2), "R² of the linear model on unseen students"],
+  [fmt(R.models[1].mae, 1), "marks of typical error"]
+].map(([n, t]) => `<div><b>${n}</b><span>${t}</span></div>`).join("");
+
+$("log").innerHTML = R.log.map(l => `<div class="row"><b>${l.step}</b><div><small>Found: </small>${l.found}</div><div><small>Done: </small>${l.action}</div></div>`).join("");
+
+// scatter with least squares line
+(function(){
+  const pts = R.points, W = 520, H = 330, m = {l:46, r:12, t:12, b:40};
+  const xs = pts.map(p => p[0]), ys = pts.map(p => p[1]);
+  const xmax = Math.ceil(Math.max(...xs) / 5) * 5, ymin = 40, ymax = 100;
+  const sx = v => m.l + v / xmax * (W - m.l - m.r), sy = v => H - m.b - (v - ymin) / (ymax - ymin) * (H - m.t - m.b);
+  const n = pts.length, mx = xs.reduce((a,b)=>a+b)/n, my = ys.reduce((a,b)=>a+b)/n;
+  const b = xs.reduce((a,x,i)=>a+(x-mx)*(ys[i]-my),0) / xs.reduce((a,x)=>a+(x-mx)**2,0), a0 = my - b * mx;
+  let s = "";
+  for (let y = ymin; y <= ymax; y += 10) s += `<line x1="${m.l}" x2="${W-m.r}" y1="${sy(y)}" y2="${sy(y)}" stroke="var(--rule)"/><text x="${m.l-8}" y="${sy(y)+4}" text-anchor="end">${y}</text>`;
+  for (let x = 0; x <= xmax; x += 5) s += `<text x="${sx(x)}" y="${H-m.b+18}" text-anchor="middle">${x}</text>`;
+  s += pts.map(p => `<circle cx="${sx(p[0])}" cy="${sy(p[1])}" r="3" fill="var(--blue)" fill-opacity=".45"/>`).join("");
+  s += `<line x1="${sx(0)}" y1="${sy(a0)}" x2="${sx(xmax)}" y2="${sy(a0+b*xmax)}" stroke="var(--pen)" stroke-width="2.4"/>`;
+  s += `<text x="${(W+m.l)/2}" y="${H-6}" text-anchor="middle">Study hours per week</text><text transform="translate(12 ${H/2}) rotate(-90)" text-anchor="middle">Final score</text>`;
+  $("scatter").innerHTML = s;
+  $("plotsub").textContent = `Each dot is one student. The line adds about ${fmt(b,1)} marks for every extra weekly study hour, though the dots are spread widely around it.`;
+})();
+
+const bar = (label, v, max, shown) => `<div class="b"><span>${label}</span><div class="track"><div class="fill" style="width:${Math.max(0, v/max*100)}%"></div></div><span class="val">${shown}</span></div>`;
+$("corr").innerHTML = Object.entries(R.corr_final).sort((a,b)=>b[1]-a[1]).map(([k,v]) => bar(names[k], v, 1, fmt(v,2))).join("");
+
+const gname = {study:"Study hours", attendance:"Attendance", parent:"Parent education", tuition:"Tuition", internet:"Internet", gender:"Gender", area:"Area"};
+function showGroup(k){
+  $("seg").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b.dataset.k === k));
+  $("groupbars").innerHTML = R.groups[k].map(g => bar(`${g.label} (${g.n})`, g.mean, 100, fmt(g.mean,1))).join("");
+}
+$("seg").innerHTML = Object.keys(R.groups).map(k => `<button type="button" data-k="${k}">${gname[k]}</button>`).join("");
+$("seg").addEventListener("click", e => { if (e.target.dataset.k) showGroup(e.target.dataset.k); });
+showGroup("study");
+
+$("modelsub").textContent = `Trained on ${R.train_n} students and tested on ${R.test_n} the model had not seen. Five fold cross validation on all rows gave an average R² of ${fmt(R.cv_mean,2)}.`;
+const best = Math.max(...R.models.map(m => m.r2));
+$("models").innerHTML = `<tr><th>Model</th><th>MAE</th><th>RMSE</th><th>R²</th></tr>` + R.models.map(m => `<tr class="${m.r2===best?"best":""}"><td>${m.model}</td><td>${fmt(m.mae,2)}</td><td>${fmt(m.rmse,2)}</td><td>${fmt(m.r2,3)}</td></tr>`).join("");
+
+// predictor
+const sl = [["study_hours_week","Study hours per week",.5],["attendance","Attendance (%)",1],["sleep_hours","Sleep hours per night",.1],["previous_score","Previous score",1]];
+let html = sl.map(([k,l,step]) => { const [lo,hi,med] = R.ranges[k]; return `<div class="field"><label for="${k}">${l}<output id="o_${k}">${med}</output></label><input type="range" id="${k}" min="${Math.floor(lo)}" max="${Math.ceil(hi)}" step="${step}" value="${med}"></div>`; }).join("");
+const sel = (id, l, opts) => `<div class="field"><label for="${id}">${l}</label><select id="${id}">${opts.map(o=>`<option>${o}</option>`).join("")}</select></div>`;
+html += sel("private_tuition","Private tuition",["No","Yes"]) + sel("internet_access","Internet at home",["Yes","No"]) + sel("parent","Highest parent education",["School","Graduate","Postgraduate"]);
+$("form").innerHTML = html;
+
+function estimate(){
+  const v = k => Number($(k).value), c = R.coef;
+  const p = $("parent").value;
+  let y = R.intercept + c.study_hours_week*v("study_hours_week") + c.attendance*v("attendance")
+    + c.sleep_gap*Math.abs(v("sleep_hours")-7.5) + c.previous_score*v("previous_score")
+    + c.private_tuition*($("private_tuition").value==="Yes") + c.internet_access*($("internet_access").value==="Yes")
+    + c.parent_graduate*(p==="Graduate") + c.parent_postgraduate*(p==="Postgraduate");
+  y = Math.min(100, Math.max(0, y));
+  sl.forEach(([k]) => $("o_"+k).textContent = $(k).value);
+  $("estnum").textContent = Math.round(y);
+  const e = R.models[1].mae;
+  $("esttext").textContent = `out of 100. Most students in the test set landed within about ${fmt(e,0)} marks of their estimate, so ${Math.max(0,Math.round(y-e))} to ${Math.min(100,Math.round(y+e))} is a fair range.`;
+}
+$("form").addEventListener("input", estimate);
+estimate();
+</script>
+</body>
+</html>

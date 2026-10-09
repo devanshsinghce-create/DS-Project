@@ -1,0 +1,535 @@
+student_id,gender,age,area,parent_education,study_hours_week,attendance,sleep_hours,internet_access,private_tuition,previous_score,final_score
+S0328,m,16,Urban,SCHOOL,14.3 hrs,78%,4.4,N,No,63.0,65.0
+S0382,F,17,Rural,post graduate,6.3,97.0,7.2,0,no,78.0,74.0
+S0483,male,18,Urban,School,5.5,82.0,6.3,Yes,Y,53.0,53.0
+S0056,Male,16,Urban,school,6.4,68.0,6.0,1,yes,66.0,67.0
+S0274, f,17,Urban,postgraduate,12.5,88.0,4.2,1,Y,69.0,59.0
+S0004,Male,15,Rural,SCHOOL,13.2,91.0,6.1,Y,1,49.0,62.0
+S0098, f,17,Urban,post graduate,12.8,86.0,7.3,1,Yes,54.0,77.0
+S0091,Male,17,Rural,PG,6.3,67.0,7.4,no,yes,38.0,53.0
+S0205,MALE ,17,Urban,graduate,13.0,89%,8.2,,No,76.0,85.0
+S0071,Female,17,Urban,SCHOOL,8.4,70.0,6.2,1,0,70.0,62.0
+S0479,Female,16,Urban,School,2.7,94%,6.3,yes,Yes,65.0,72.0
+S0396,,16,Rural,UG,6.2,100.0,7.8,Y,no,43.0,66.0
+S0473,MALE ,15,Urban,Graduate,6.8,87.0,4.6,yes,Yes,880,54.0
+S0051,Female,16,Rural,Graduate,7.4,,6.1,Y,0,48.0,62.0
+S0307,m,17,Rural,Postgraduate,,71.0,6.8,no,Yes,785,82.0
+S0116, f,15,Rural,Graduate,11.6,83.0,6.4,yes,0,79.0,82.0
+S0110,F,18,Rural,graduate,,86%,5.7,1,Yes,77.0,78.0
+S0133,M,17,Rural,school,13.4,60%,7.5,N,1,77.0,76.0
+S0352,male,17,Urban,school,13.8,70.0,6.9,yes,0,70.0,73.0
+S0228, f,16,Urban,Graduate ,18.0,92.0,6.9,yes,no,68.0,87.0
+S0441,Female,16,Urban,,13.8,,7.3,Yes,No,79.0,82.0
+S0052,Male,16,Urban,postgraduate,9.4,68.0,5.8,Y,yes,80.0,72.0
+S0355,Female,16 yrs,Rural,postgraduate,19.6,,6.9,0,Yes,80.0,95.0
+S0471,FEMALE,16,Urban,,13.5,96%,7.0,no,0,87.0,79.0
+S0360,Female,15,Rural,SCHOOL,9.1,66.0,5.2,No,yes,81.0,73.0
+S0139,Male,16,Urban,PG,,97.0,7.0,yes,No,59.0,76.0
+S0192,Female,18,Urban,Postgraduate,17.5,84.0,7.0,1,1,64.0,89.0
+S0066,Male,17,Rural,Graduate,12.4,79%,6.9,Yes,No,84.0,89.0
+S0174,FEMALE,17,urban,graduate,1.4,93.0,,Y,Y,73.0,72.0
+S0376,male,15,Urban,Postgraduate,7.9,60.0,7.3,1,Y,53.0,66.0
+S0246,male,,Urban,school,7.6,81.0,5.3,N,N,58.0,61.0
+S0518,MALE ,16,Urban,graduate,15.3,60%,5.4,Y,N,81.0,77.0
+S0458,Female,15 yrs,Urban,post graduate,9.0,N/A,7.0,Y,Yes,73.0,78.0
+S0497,MALE ,16,Urban,UG,10.8,940,7.4,Y,No,62.0,80.0
+S0492, f,16,urban,School,,82.0,5.4,,Yes,,55.0
+S0024,F,16 yrs,Urban,Graduate ,13.6,81.0,7.4,0,Y,67.0,69.0
+S0418,m,16,Rural,,11.2,82.0,7.2,N,No,42.0,58.0
+S0281,Male,18,Rural,Postgraduate,10.7,N/A,7.8,no,Yes,79.0,85.0
+S0223,F,17 yrs,Urban,post graduate,18.1,80.0,7.1,1,0,82.0,82.0
+S0229,,17,Rural,School,10.2 hrs,81.0,8.6,N,no,69.0,66.0
+S0014, f,17,urban,SCHOOL,,88.0,7.8,Y,yes,75.0,82.0
+S0456,Female,16,Urban,,12.8,78%,6.6,Y,yes,36.0,
+S0477, f,16,Rural,Graduate ,2.5,80%,5.6,Yes,no,79.0,73.0
+S0501,male,17,Urban,graduate,12.4,83.0,5.9,1,1,59.0,71.0
+S0033,male,18,Rural,Graduate ,9.7,61.0,4.8,Y,No,62.0,50.0
+S0090,Female,15 yrs,urban,SCHOOL,7.4,77.0,7.5,N,N,61.0,66.0
+S0402, f,18,urban,postgraduate,13.4,74.0,6.8,1,N,50.0,67.0
+S0290,m,16,Urban,school,19.1,75.0,6.1,Yes,1,63.0,79.0
+S0386,m,18,Rural,school,22.8,94.0,7.3,no,No,67.0,85.0
+S0237,female,16,Rural,graduate,7.3,81%,7.8,N,1,49.0,64.0
+S0175,female,15,Rural,Graduate,,79.0,6.8,Y,no,53.0,67.0
+S0083,Male,17,Rural,graduate,12.9,100.0,7.7,No,N,90.0,90.0
+S0147,M,16,Urban,postgraduate,10.8,71.0,6.7,Yes,N,68.0,72.0
+S0279,Male,16,Urban,Postgraduate,20.2,,7.0,1,0,23.0,64.0
+S0367,M,17,Rural,post graduate,11.6,100.0,7.6,No,N,59.0,72.0
+S0461,FEMALE,17,Rural,school,13.7,,8.0,N,yes,,70.0
+S0026, f,16,Urban,post graduate,8.0,92.0,6.9,1,1,61.0,67.0
+S0520,Female,18,Urban,Graduate ,,81.0,7.7,Y,0,54.0,66.0
+S0338,male,17,Rural,Postgraduate,4.0,67.0,8.6,No,1,67.0,66.0
+S0371,m,18,Urban,Schooling ,2.3,,6.1,yes,0,91.0,77.0
+S0268,M,18,Rural,Schooling ,14.3,100%,7.1,Y,1,49.0,75.0
+S0452,female,17,Urban,SCHOOL,10.0,86.0,8.1,yes,No,62.0,69.0
+S0505,MALE ,18,Rural,Graduate ,11.7,87.0,7.6,Yes,yes,89.0,99.0
+S0444,m,18,Rural,Postgraduate,3.5,73.0,5.7,Y,no,65.0,66.0
+S0163,m,15,Urban,School,,75.0,8.6,yes,0,25.0,68.0
+S0295,F,15,Rural,post graduate,8.4,93.0,6.0,Yes,1,70.0,78.0
+S0156,female,16,Urban,SCHOOL,10.0,90.0,7.2,yes,no,45.0,65.0
+S0218,M,17,Urban,PG,7.7,83.0,7.6,Y,N,50.0,72.0
+S0041,male,17,Urban,SCHOOL,14.5,100%,,Y,N,65.0,76.0
+S0335,MALE ,15,Rural,PG,17.0,97%,7.8,Yes,no,47.0,71.0
+S0119,m,16,Urban,postgraduate,10.5,79.0,6.9,Yes,N,66.0,62.0
+S0304,Female,17,Rural,Graduate ,3.6,93.0,6.9,0,No,37.0,59.0
+S0329,M,16,Rural,SCHOOL,16.4,98.0,6.6,Y,1,69.0,68.0
+S0491, f,16,Rural,graduate,14.2,85%,6.2,Y,1,52.0,72.0
+S0278,Female,,Urban,Postgraduate,13.9,88.0,5.9,yes,Yes,61.0,78.0
+S0337, f,17,Urban,Graduate ,4.9,87.0,5.9,yes,0,60.0,64.0
+S0284,male,18,Rural,school,6.4,55.0,6.5,N,Yes,84.0,73.0
+S0282,MALE ,17,Rural,Schooling ,12.4,78%,8.8,No,Y,38.0,64.0
+S0057,Female,16,Rural,UG,11.7,85.0,5.7,1,yes,77.0,81.0
+S0498,Male,18,Urban,School,9.6,,7.2,Y,0,55.0,70.0
+S0493, f,16,urban,School,10.2,81.0,6.3,Yes,Y,74.0,82.0
+S0189,MALE ,15,Urban,postgraduate,6.7,85.0,7.3,yes,N,66.0,68.0
+S0373,m,15,Urban,graduate,19.9,73.0,8.6,Yes,N,60.0,78.0
+S0406,FEMALE,17 yrs,Rural,PG,10.4,75.0,5.9,0,Y,74.0,71.0
+S0345,female,18,Urban,school,9.2,71.0,5.5,Yes,0,48.0,53.0
+S0425,m,17,Urban,UG,13.8,88.0,8.1,Yes,yes,53.0,73.0
+S0169,Male,15,Rural,graduate,9.6,71.0,6.8,Y,no,75.0,73.0
+S0160,female,18,Urban,SCHOOL,5.1,78%,5.7,Yes,1,56.0,63.0
+S0437,FEMALE,17,Urban,Postgraduate,8.9,78.0,7.0,N,No,69.0,72.0
+S0451,Female,18 yrs,Urban,graduate,,100.0,6.9,1,no,61.0,73.0
+S0180,female,17,urban,UG,15.4,85.0,6.9,yes,0,69.0,82.0
+S0478,m,16,Rural,graduate,12.7,77.0,6.5,1,no,66.0,79.0
+S0264,female,17,Rural,post graduate,14.2,73.0,5.9,No,N,70.0,66.0
+S0476,,17 yrs,Rural,Graduate ,10.7,100.0,7.6,yes,No,68.0,82.0
+S0061,FEMALE,18,Urban,graduate,6.8,96.0,8.5,1,0,45.0,60.0
+S0250,m,15,Urban,school,15.7,80.0,7.2,yes,N,62.0,61.0
+S0203,MALE ,18,Rural,School,18.4,,7.0,1,Y,67.0,82.0
+S0362,F,16 yrs,Rural,graduate,10.2,82.0,7.7,Y,0,78.0,81.0
+S0102,Male,15,Rural,school,4.2,82.0,7.1,yes,No,53.0,63.0
+S0214,male,,Urban,graduate,13.0,100.0,7.4,Y,N,69.0,79.0
+S0166,F,17,Urban,UG,,95%,,0,1,75.0,87.0
+S0354,M,18,Rural,SCHOOL,10.0,87.0,7.7,No,N,51.0,65.0
+S0259,male,15,Urban,Graduate ,11.5,91.0,7.0,Yes,Yes,44.0,58.0
+S0244,F,17,Urban,school,18.2 hrs,73.0,7.5,1,N,74.0,84.0
+S0413,M,18,Rural,postgraduate,7.1 hrs,89.0,6.4,0,no,38.0,57.0
+S0482,F,15,Urban,Graduate,19.2,82%,7.8,Y,N,62.0,77.0
+S0388,F,17,Urban,Graduate ,14.2,82.0,6.8,Yes,N,62.0,80.0
+S0121,male,17,Urban,Graduate ,6.6,90%,6.4,1,0,90.0,76.0
+S0155,Male,15,Rural,school,6.8,79.0,4.8,N,1,55.0,44.0
+S0174,FEMALE,17,urban,graduate,1.4,93.0,,Y,Y,73.0,72.0
+S0500,MALE ,16 yrs,Urban,graduate,10.0,66%,5.5,No,no,90.0,75.0
+S0331,F,18,Urban,Graduate,10.4 hrs,73%,7.2,Y,Yes,71.0,89.0
+S0031,m,17,Urban,Graduate,9.2,78.0,8.8,1,Y,52.0,70.0
+S0023,MALE ,16,Rural,school,12.3,56%,8.0,1,No,57.0,71.0
+S0393,,17,Urban,school,7.4,97%,7.0,Y,1,44.0,
+S0351, f,17,rural,School,14.2,74.0,6.3,,No,56.0,66.0
+S0460,MALE ,18,Urban,Postgraduate,12.4,91%,7.0,Y,yes,54.0,74.0
+S0334,female,17,rural,UG,9.8,86.0,7.4,1,0,64.0,72.0
+S0032,M,15,Urban,graduate,11.3,83.0,7.9,N,0,52.0,72.0
+S0480,M,16,Rural,UG,6.7,74.0,8.5,0,0,65.0,59.0
+S0021, f,15,Rural,Graduate,14.5,100.0,6.4,No,yes,60.0,77.0
+S0146, f,18,Urban,graduate,8.6,75.0,7.4,1,N,52.0,62.0
+S0114,m,16,Urban,PG,11.5,95.0,6.4,Yes,no,66.0,72.0
+S0053,M,16,Urban,school,0.5,86%,7.3,no,N,63.0,55.0
+S0001,m,15,Urban,School,15.4,80.0,6.5,N,N,69.0,77.0
+S0439,male,17,Rural,Graduate,7.6 hrs,94.0,8.2,Yes,0,52.0,58.0
+S0319, f,18,Rural,post graduate,8.2,100.0,6.6,Yes,1,62.0,80.0
+S0389, f,17,Rural,Graduate ,10.6,85%,6.7,1,N,83.0,84.0
+S0381,MALE ,17,Urban,Graduate ,9.0,100.0,6.6,yes,N,75.0,87.0
+S0238,m,17,Rural,Graduate,11.8 hrs,,6.6,No,no,51.0,77.0
+S0003,F,16,Urban,graduate,13.3,79.0,7.4,1,Y,,83.0
+S0511, f,16,Urban,school,9.9,93.0,5.2,1,no,53.0,67.0
+S0059,Female,16,Urban,UG,,97%,6.5,1,Yes,75.0,64.0
+S0243,MALE ,18,Rural,School,8.1,87%,,1,0,51.0,69.0
+S0464,MALE ,18,urban,Schooling ,15.2,74.0,9.0,Yes,No,90.0,89.0
+S0257,FEMALE,16,Urban,PG,7.3,76%,,no,yes,73.0,75.0
+S0075,FEMALE,15 yrs,Urban,post graduate,9.7,100.0,7.3,yes,No,40.0,70.0
+S0509,m,15,Urban,Graduate,9.6,,6.8,yes,1,68.0,82.0
+S0453,MALE ,17,Urban,post graduate,8.8,78.0,6.1,Yes,N,79.0,65.0
+S0171,male,18,Urban,PG,13.5,74%,6.3,Y,No,63.0,69.0
+S0081,F,15,Rural,UG,8.0,79.0,6.3,Y,no,53.0,61.0
+S0356,Female,17,Urban,Graduate ,6.9,59.0,8.1,Yes,N,76.0,61.0
+S0027,Male,15,Rural,Schooling ,9.8,73.0,7.7,Yes,1,79.0,81.0
+S0390,MALE ,15,Urban,SCHOOL,,88.0,9.2,Yes,0,86.0,70.0
+S0302,FEMALE,16,Rural,school,11.3,90.0,7.0,N,0,49.0,59.0
+S0468,Female,15,Urban,Schooling ,9.0,77.0,7.1,Yes,no,67.0,75.0
+S0240,FEMALE,17,Urban,Graduate,10.3,75.0,,yes,1,78.0,83.0
+S0275,MALE ,15,Urban,SCHOOL,11.8,91.0,6.0,No,no,68.0,69.0
+S0109,M,16,Urban,PG,1.9,90.0,6.8,Y,0,44.0,43.0
+S0148,Male,17,Rural,graduate,3.9,65.0,8.8,no,1,74.0,63.0
+S0015,FEMALE,17,Urban,SCHOOL,8.0,80.0,6.6,yes,1,70.0,79.0
+S0327,Male,16,urban,SCHOOL,13.8,,6.2,Yes,N,47.0,57.0
+S0115,female,16 yrs,Rural,school,15.2,,6.7,No,No,70.0,80.0
+S0470,FEMALE,17,Rural,postgraduate,,72.0,7.0,yes,Yes,68.0,81.0
+S0165,m,17,Urban,UG,2.5,87%,0,1,1,61.0,68.0
+S0060,F,18,Urban,school,12.0,86.0,6.3,yes,no,65.0,75.0
+S0447,Male,17,Urban,Graduate,16.8,80.0,7.6,Yes,yes,73.0,83.0
+S0099,FEMALE,16,rural,UG,14.7,79.0,4.8,Y,yes,72.0,72.0
+S0148,Male,17,Rural,graduate,3.9,65.0,8.8,no,1,74.0,63.0
+S0467,M,16,Rural,postgraduate,14.4,,6.9,1,no,71.0,80.0
+S0042,F,15,Urban,UG,4.4,63.0,7.7,No,No,93.0,78.0
+S0499,Female,15,Rural,Graduate,7.6 hrs,,6.0,yes,no,65.0,65.0
+S0241,MALE ,17,Rural,post graduate,12.8 hrs,75.0,8.3,Yes,0,62.0,64.0
+S0323,Female,15,Rural,UG,20.1,62%,7.9,yes,0,67.0,81.0
+S0080, f,18,Urban,Graduate ,19.5,65.0,5.6,Yes,yes,60.0,70.0
+S0029,FEMALE,17,Urban,SCHOOL,10.8,,6.4,yes,Y,41.0,67.0
+S0459,female,17,Urban,PG,14.4,54.0,7.5,Yes,Yes,42.0,63.0
+S0151,F,17,Urban,Graduate,168,100%,6.0,Y,1,87.0,91.0
+S0217,m,16,Rural,Schooling ,14.0,80.0,5.7,Y,Y,52.0,66.0
+S0494, f,16,Urban,UG,3.5,89.0,5.0,yes,yes,36.0,
+S0391,Female,16,Urban,Graduate,5.0,81%,4.8,no,N,84.0,71.0
+S0309,Male,16,Urban,UG,7.6,74.0,8.0,1,Y,62.0,67.0
+S0058,m,17 yrs,rural,Graduate ,10.7,77.0,7.0,1,No,59.0,68.0
+S0361, f,17,Urban,SCHOOL,12.4,100.0,7.3,yes,1,67.0,83.0
+S0063,MALE ,,Urban,,5.2 hrs,83.0,8.3,1,Yes,79.0,72.0
+S0415,male,17,Rural,School,13.0,84%,7.9,0,no,55.0,68.0
+S0112,Female,16,Rural,PG,,86.0,7.6,no,N,,67.0
+S0085, f,17,Urban,PG,8.7,70%,5.6,Y,yes,68.0,77.0
+S0423, f,15,Rural,UG,17.2,82.0,7.4,Yes,1,69.0,82.0
+S0249,FEMALE,16,Rural,SCHOOL,5.7,80.0,8.5,Y,1,59.0,72.0
+S0271,m,17,Rural,Graduate ,10.7,69.0,6.3,no,no,44.0,60.0
+S0233,m,17,Urban,Graduate ,5.0,86.0,7.4,yes,N,60.0,63.0
+S0130,Female,18,urban,UG,9.5,81.0,8.8,N,N,56.0,55.0
+S0194,Male,16,Rural,,15.5,99.0,6.1,Yes,no,60.0,78.0
+S0097,Male,17,Urban,UG,8.8,86.0,6.0,Yes,Yes,51.0,60.0
+S0245, f,17,Rural,Graduate,15.7,81.0,8.5,yes,0,58.0,51.0
+S0178,male,17,urban,PG,8.8,85%,5.9,Y,Y,64.0,80.0
+S0395,Female,18,Urban,Graduate ,10.3,87.0,7.9,0,1,,65.0
+S0514,F,17 yrs,Urban,School,10.7,84.0,5.5,yes,1,62.0,72.0
+S0142,male,18,Rural,school,16.0,79.0,7.1,Yes,0,65.0,75.0
+S0496,m,16,Urban,School,14.8,72%,8.2,Yes,N,56.0,76.0
+S0221,M,16,urban,School,3.9,66.0,6.8,yes,Yes,59.0,63.0
+S0104,M,15,Urban,SCHOOL,14.2,91.0,7.4,1,no,56.0,82.0
+S0407,male,17,Urban,SCHOOL,9.7,92.0,5.3,yes,1,51.0,70.0
+S0188,M,17,Urban,UG,5.5,86.0,7.9,yes,N,69.0,74.0
+S0465,Male,15,Urban,School,13.0,75.0,6.4,Yes,0,51.0,72.0
+S0347,F,18,Urban,school,11.2,88.0,6.4,no,Y,43.0,55.0
+S0504,FEMALE,15,Rural,Graduate,7.3,N/A,7.9,Yes,0,56.0,68.0
+S0219,male,17,Rural,SCHOOL,11.2,80.0,6.3,Yes,No,53.0,71.0
+S0082,M,18,Rural,SCHOOL,10.7,64.0,6.0,1,Y,60.0,62.0
+S0254,male,16,Rural,School,10.0,53.0,6.6,1,No,73.0,71.0
+S0296,F,16,Urban,graduate,,,6.5,N,1,55.0,59.0
+S0233,m,17,Urban,Graduate ,5.0,86.0,7.4,yes,N,60.0,63.0
+S0457,Male,17,Urban,Schooling ,3.0,71.0,6.6,Yes,No,66.0,54.0
+S0466,FEMALE,15 yrs,Urban,Schooling ,15.2,81.0,6.4,Y,N,69.0,79.0
+S0293, f,16,Urban,postgraduate,22.2,N/A,5.8,1,N,51.0,72.0
+S0431,M,16,Rural,Postgraduate,9.3,62.0,7.7,Yes,No,97.0,88.0
+S0320,FEMALE,16 yrs,urban,SCHOOL,7.0,85%,7.6,yes,N,61.0,69.0
+S0054,Male,16,Rural,Schooling ,8.2,70.0,7.1,yes,N,38.0,51.0
+S0363,Male,18,Rural,Graduate,3.9,86%,7.6,Yes,No,69.0,72.0
+S0172,MALE ,17,Urban,Schooling ,5.1,89.0,7.1,1,Y,76.0,74.0
+S0201,male,17,Rural,Graduate ,5.6,65.0,6.0,1,no,60.0,54.0
+S0322,male,17,Urban,Graduate,10.7,98.0,9.5,Yes,Y,48.0,60.0
+S0140,MALE ,16,Urban,Postgraduate,11.3,,7.4,yes,Yes,54.0,69.0
+S0294,Male,18 yrs,Rural,graduate,9.1,94.0,18,no,Yes,54.0,47.0
+S0306,M,17 yrs,rural,Schooling ,14.5,80%,7.2,N,0,76.0,81.0
+S0067,Female,17,Urban,Schooling ,11.6,74.0,5.3,Yes,No,77.0,72.0
+S0450,,16,Urban,graduate,10.2,86.0,7.7,yes,1,70.0,79.0
+S0455, f,17,Urban,SCHOOL,5.3,,7.8,Y,1,81.0,72.0
+S0222,M,16,Urban,graduate,6.9,71%,7.5,yes,1,73.0,73.0
+S0317,female,18,Urban,School,9.8,85.0,,yes,0,53.0,54.0
+S0213,Female,15,Rural,Graduate ,9.6,84.0,,N,0,64.0,70.0
+S0236,F,17,urban,UG,14.9,88.0,6.5,1,Y,50.0,73.0
+S0265, f,15,urban,UG,5.6,,8.3,yes,Yes,83.0,71.0
+S0100,male,17,Urban,school,7.8,70.0,7.0,No,N,66.0,65.0
+S0428,female,18,Urban,post graduate,7.7,79.0,7.2,Y,0,70.0,81.0
+S0149,female,15,Urban,Graduate ,14.2,84.0,6.1,Y,yes,46.0,71.0
+S0016,female,16,Urban,Graduate,16.1,78.0,6.6,Y,1,71.0,74.0
+S0164,Male,15,Urban,School,17.1,,7.7,Yes,0,60.0,82.0
+S0312,F,17,Rural,Graduate ,2.7,70%,7.1,yes,0,92.0,78.0
+S0047,M,16,Urban,Graduate,6.9 hrs,88.0,8.6,no,no,62.0,76.0
+S0087,Male,18,Rural,Graduate ,8.7,66.0,5.5,yes,Y,75.0,76.0
+S0038,female,17,Urban,Graduate ,9.4,69.0,8.9,yes,Y,34.0,60.0
+S0454,M,18,Rural,Graduate ,10.1,,7.4,N,no,74.0,80.0
+S0398,Male,16,Urban,UG,10.8,100%,6.7,no,Yes,71.0,77.0
+S0411,Male,15,Urban,Graduate,11.4,,5.6,Yes,N,72.0,81.0
+S0207, f,17 yrs,Urban,Graduate,6.3,,6.2,1,No,81.0,69.0
+S0421, f,15,Urban,Schooling ,15.1,74.0,8.6,1,No,,84.0
+S0262,MALE ,,Rural,Graduate ,17.2,93%,6.9,no,yes,56.0,83.0
+S0173,female,17 yrs,Urban,,13.7,75%,8.0,Y,Y,41.0,65.0
+S0074,M,18,Rural,UG,13.8 hrs,67.0,8.2,yes,No,,64.0
+S0301,M,15,Urban,,17.6 hrs,86.0,7.0,Y,N,66.0,77.0
+S0105,Female,17,Urban,School,18.5,66.0,,1,Y,,67.0
+S0260,,17,Urban,post graduate,5.3,,6.9,yes,yes,59.0,71.0
+S0434,Male,16,urban,School,8.8,63.0,6.1,Y,No,52.0,59.0
+S0490,FEMALE,17,Urban,SCHOOL,9.3,82.0,5.9,No,N,76.0,71.0
+S0017,female,16,Urban,,14.5,80%,9.0,yes,yes,48.0,74.0
+S0342,M,17,Urban,SCHOOL,9.8,80.0,6.4,Yes,N,39.0,57.0
+S0092,Female,16,Urban,postgraduate,13.6,57.0,8.9,yes,N,79.0,78.0
+S0089,FEMALE,17,Urban,postgraduate,3.2,100%,5.3,yes,N,52.0,54.0
+S0419,M,15,Urban,Graduate,14.1,73%,9.9,Y,Y,69.0,66.0
+S0141,F,16,urban,,9.3,77.0,7.2,yes,0,68.0,75.0
+S0195,F,15 yrs,Urban,Graduate,15.9,93%,7.3,1,no,58.0,74.0
+S0206,m,17,Rural,Graduate ,13.5,80.0,,Yes,no,54.0,69.0
+S0103,Female,15,Rural,post graduate,5.4,92.0,5.9,Yes,1,65.0,74.0
+S0239,m,16,Urban,UG,12.6,94%,7.8,yes,1,86.0,90.0
+S0285,MALE ,15,Urban,Graduate,11.9,96.0,7.8,Y,N,53.0,69.0
+S0247,Female,,Rural,SCHOOL,13.6,58.0,6.5,yes,1,71.0,85.0
+S0158,Female,17,Urban,Graduate,11.5,86.0,5.5,N,yes,53.0,66.0
+S0134,female,17,Rural,SCHOOL,8.1,74.0,7.3,1,No,57.0,64.0
+S0368,M,15,Rural,SCHOOL,13.2,93%,7.4,Y,Y,74.0,85.0
+S0325, f,18,Urban,Schooling ,6.8,100.0,7.8,Yes,Yes,62.0,74.0
+S0019,female,18,Rural,Graduate,9.6,81.0,7.3,No,0,67.0,74.0
+S0365,male,18,Urban,post graduate,6.0,N/A,6.7,1,yes,60.0,60.0
+S0379,Male,17,Urban,Postgraduate,13.5,60.0,6.1,1,0,54.0,68.0
+S0272,M,17,Urban,UG,8.3,88.0,6.4,Y,No,56.0,62.0
+S0369,M,17,Urban,school,13.4,91.0,6.4,Yes,N,40.0,64.0
+S0378,female,17,Urban,UG,8.2,73.0,4.3,yes,Yes,75.0,77.0
+S0269,,17 yrs,Rural,Graduate ,120,83.0,9.0,0,no,64.0,65.0
+S0035, f,17,Urban,post graduate,13.2,82%,6.9,Yes,No,81.0,88.0
+S0182,m,16,Urban,,14.9,98.0,8.0,Y,no,32.0,58.0
+S0185,m,16,Rural,Graduate,12.2,-20,7.2,N,No,49.0,59.0
+S0208,FEMALE,18,Urban,Graduate,13.3,69.0,8.0,1,1,57.0,72.0
+S0095,Female,16,Rural,post graduate,9.8 hrs,75%,7.8,No,No,34.0,58.0
+S0404, f,15,urban,Graduate,10.2,86.0,7.8,yes,no,42.0,64.0
+S0515,FEMALE,15,Urban,PG,11.8,77.0,6.4,yes,0,59.0,78.0
+S0123,Female,17,Urban,Graduate,12.7,81.0,7.5,Y,Y,69.0,74.0
+S0370, f,17,Rural,post graduate,13.6,88.0,8.1,No,No,56.0,76.0
+S0079,FEMALE,15,Urban,UG,12.5,89%,7.8,Yes,yes,56.0,73.0
+S0062,FEMALE,16,Rural,school,13.2 hrs,74.0,6.9,No,Yes,42.0,68.0
+S0510,male,17,Urban,school,8.6,99.0,9.0,Y,0,61.0,77.0
+S0126,female,18,Rural,Schooling ,19.4,81.0,9.4,No,Y,55.0,74.0
+S0343,female,18,Rural,graduate,4.4 hrs,85.0,6.3,1,N,60.0,63.0
+S0341,FEMALE,16,Rural,UG,8.1,67.0,6.4,No,0,47.0,71.0
+S0481,MALE ,15,urban,SCHOOL,17.1,75.0,6.4,0,1,34.0,64.0
+S0462,male,16,urban,School,10.7,77.0,,1,0,62.0,75.0
+S0358,F,16,Urban,postgraduate,11.1 hrs,95.0,7.8,Yes,1,76.0,88.0
+S0448,Female,17,urban,Graduate,9.7,68.0,5.3,1,yes,50.0,54.0
+S0025,female,17,Urban,SCHOOL,11.3,100.0,6.8,yes,no,84.0,84.0
+S0353,male,18,Urban,SCHOOL,12.6,76%,7.4,yes,N,52.0,57.0
+S0383, f,15,Rural,graduate,12.2 hrs,79.0,8.1,yes,N,65.0,74.0
+S0292,Male,16,Rural,school,9.3 hrs,73%,7.3,1,no,71.0,70.0
+S0127,m,17,Urban,School,14.6,82.0,6.2,yes,yes,74.0,83.0
+S0517,female,17 yrs,Urban,Graduate ,9.6,79.0,,1,1,77.0,81.0
+S0432,Female,18,Rural,school,11.3,73.0,6.8,no,No,63.0,71.0
+S0179, f,17,Urban,Graduate,15.0,92.0,7.3,1,1,52.0,88.0
+S0475,F,15,Urban,Graduate ,13.1,75%,6.9,1,No,76.0,79.0
+S0408,male,18,Rural,Graduate ,13.1,95.0,7.9,yes,0,76.0,88.0
+S0224,Male,16 yrs,Urban,Graduate,,80%,4.0,0,N,50.0,51.0
+S0385,Male,17,Urban,School,12.9,92.0,5.9,yes,Y,,89.0
+S0094,MALE ,17,Urban,SCHOOL,6.9,79.0,6.6,Y,no,63.0,61.0
+S0070,Male,16,Rural,SCHOOL,4.4 hrs,56.0,7.7,No,No,86.0,78.0
+S0037, f,18,Rural,Schooling ,3.7,86.0,5.7,no,no,56.0,49.0
+S0297,FEMALE,16,Urban,school,17.3,74.0,6.4,Yes,yes,32.0,67.0
+S0161,F,17,Urban,Graduate ,4.8 hrs,67.0,7.8,Yes,no,49.0,50.0
+S0012,F,16 yrs,Urban,postgraduate,15.9,98.0,,N,N,49.0,71.0
+S0145,F,18,Urban,school,15.4,71.0,5.9,yes,1,68.0,77.0
+S0387,M,15,Rural,Graduate,17.1,78%,6.7,0,Yes,51.0,73.0
+S0128,FEMALE,18,Urban,Schooling ,3.8,74%,,N,N,40.0,51.0
+S0314,M,17,Urban,Schooling ,16.4,97.0,6.1,no,no,92.0,90.0
+S0303,MALE ,17,rural,Graduate,14.6,81.0,,yes,1,54.0,63.0
+S0010,M,15,Rural,Postgraduate,10.2,80.0,7.1,Y,yes,,58.0
+S0409,Female,16,Urban,postgraduate,,90%,7.3,Yes,0,79.0,85.0
+S0177,female,15,Rural,graduate,11.1,68.0,,yes,No,48.0,50.0
+S0232,F,17,Urban,Schooling ,13.1,88.0,8.0,1,no,69.0,80.0
+S0211,male,16,Rural,school,15.8,89.0,7.4,Yes,yes,58.0,79.0
+S0129,FEMALE,15,Urban,graduate,17.3,100.0,6.2,Y,yes,,82.0
+S0144,Male,15,Urban,SCHOOL,9.1,71.0,8.7,Y,No,39.0,56.0
+S0242,FEMALE,18,Rural,School,9.8,,6.7,,Y,63.0,68.0
+S0008,F,16,Urban,Graduate ,8.7,71.0,6.8,1,N,47.0,67.0
+S0299,Male,17,Rural,UG,21.9,90.0,6.4,no,0,43.0,81.0
+S0311,F,16,Urban,School,8.9,N/A,6.6,Yes,No,49.0,68.0
+S0255,FEMALE,16,Urban,Schooling ,,77.0,7.3,1,0,59.0,76.0
+S0405,male,16,Urban,Graduate ,13.7,100.0,5.8,no,Y,35.0,57.0
+S0063,MALE ,,Urban,,5.2 hrs,83.0,8.3,1,Yes,79.0,72.0
+S0009,MALE ,15,Rural,SCHOOL,13.9,100.0,5.9,yes,0,65.0,68.0
+S0157,m,15,Rural,Schooling ,14.5,91.0,6.5,Y,No,74.0,74.0
+S0028, f,16,Urban,Graduate ,11.1,89.0,5.4,1,0,71.0,76.0
+S0267,m,18,Urban,School,14.8,90.0,6.6,Y,No,63.0,75.0
+S0315,M,18,Urban,PG,7.8,84.0,7.1,Yes,no,83.0,77.0
+S0065,m,17,Urban,graduate,9.7,77.0,7.2,yes,Y,68.0,75.0
+S0256,M,16,Rural,UG,,78%,8.2,0,N,54.0,69.0
+S0268,M,18,Rural,Schooling ,14.3,100%,7.1,Y,1,49.0,75.0
+S0154,MALE ,18,Rural,PG,12.1,85.0,6.5,No,N,50.0,61.0
+S0049,female,16 yrs,Rural,graduate,,71%,8.3,N,no,71.0,75.0
+S0209,MALE ,15,Urban,school,4.7,77.0,6.3,Yes,N,61.0,62.0
+S0288,FEMALE,15,Rural,UG,10.8,88%,5.2,Yes,N,86.0,75.0
+S0002,female,17,Rural,Graduate ,24.9,78%,6.4,Y,No,51.0,86.0
+S0270,Female,16,Urban,graduate,12.6,74%,6.6,Yes,no,64.0,76.0
+S0266,female,16,Urban,UG,13.2,77%,5.9,Y,yes,67.0,67.0
+S0359,MALE ,15,urban,Schooling ,12.8 hrs,83%,6.5,yes,Y,34.0,66.0
+S0366,F,16,Urban,Postgraduate,3.2,,6.2,yes,No,69.0,61.0
+S0096,MALE ,17,Rural,school,2.6,150,5.6,No,yes,71.0,68.0
+S0507,,16 yrs,Urban,Schooling ,12.8,63.0,7.0,Yes,no,87.0,80.0
+S0043,FEMALE,17,Urban,Graduate ,10.0 hrs,70.0,,No,Yes,81.0,75.0
+S0348,F,15 yrs,Rural,graduate,17.4,94%,,no,Y,69.0,73.0
+S0117,MALE ,18,urban,UG,16.5,98%,7.2,Y,N,54.0,72.0
+S0046,female,16,Urban,graduate,13.4,85%,5.4,1,No,56.0,72.0
+S0162,female,15,Rural,graduate,,73.0,6.3,No,N,58.0,66.0
+S0422,FEMALE,16,Urban,Schooling ,10.5,84.0,8.2,yes,Yes,66.0,73.0
+S0118,M,16,Urban,UG,11.0,83.0,7.4,Yes,0,72.0,74.0
+S0289,Female,17 yrs,Urban,School,17.1,88.0,5.4,Yes,N,61.0,74.0
+S0078,Male,17,Rural,post graduate,12.0,89.0,8.2,Y,Y,69.0,83.0
+S0487,male,16,urban,SCHOOL,8.8,56.0,5.1,1,No,62.0,68.0
+S0064,female,17,Urban,school,11.1,71.0,6.5,yes,no,79.0,68.0
+S0339,male,18,Urban,School,18.5,67.0,7.1,Y,Yes,55.0,79.0
+S0430, f,17,Urban,,23.8,87.0,6.7,yes,N,67.0,89.0
+S0426,M,16,Urban,School,12.3,75.0,5.5,yes,0,75.0,70.0
+S0231,Male,17,Rural,Schooling ,12.6,76.0,7.4,Yes,0,62.0,78.0
+S0298,Male,16,urban,Schooling ,15.4,75.0,8.5,Y,Y,61.0,72.0
+S0187,Male,18 yrs,rural,PG,9.9,95%,8.4,no,N,78.0,79.0
+S0372,F,17,Rural,Graduate ,4.9,96.0,6.4,yes,1,55.0,61.0
+S0200,FEMALE,,Urban,Graduate ,13.9,67.0,5.1,Y,Yes,50.0,
+S0377,F,17,urban,graduate,11.4,86.0,7.2,yes,N,61.0,55.0
+S0122, f,18 yrs,urban,graduate,23.7,96.0,8.0,Y,yes,43.0,81.0
+S0274, f,17,Urban,postgraduate,12.5,88.0,4.2,1,Y,69.0,59.0
+S0474,male,16,Rural,postgraduate,6.9,79.0,8.9,yes,yes,75.0,78.0
+S0308, f,15,Rural,Schooling ,13.9,93.0,6.1,no,Y,72.0,88.0
+S0506,male,15,Rural,UG,10.6,88.0,6.3,Yes,Yes,64.0,79.0
+S0364,female,,Rural,Schooling ,11.0 hrs,86%,7.4,N,No,63.0,60.0
+S0159,female,16,Rural,Postgraduate,4.6,79.0,8.1,No,Y,79.0,76.0
+S0086,female,17,Rural,school,4.0,71.0,6.8,No,N,62.0,61.0
+S0226,Male,16,Urban,SCHOOL,4.1,80.0,7.6,Yes,Yes,42.0,57.0
+S0263,M,16,Rural,postgraduate,18.5,82.0,7.2,yes,1,84.0,84.0
+S0332,MALE ,16,Urban,PG,10.2,74%,7.3,Y,yes,83.0,76.0
+S0440,m,16,Urban,UG,3.3,77%,6.1,Y,1,77.0,71.0
+S0077,m,15,Rural,graduate,,86.0,8.4,1,yes,50.0,71.0
+S0427,FEMALE,16,rural,school,12.1,98.0,8.6,Y,No,87.0,80.0
+S0410,m,16,Rural,SCHOOL,10.3,71%,7.5,yes,Yes,53.0,64.0
+S0088,MALE ,16,Rural,Schooling ,6.2,97%,6.9,,N,78.0,72.0
+S0048,Female,17,Urban,School,11.3 hrs,82%,7.2,Y,1,51.0,61.0
+S0183,MALE ,17,Urban,graduate,15.9,79.0,5.8,0,No,83.0,
+S0106,FEMALE,16,Urban,Schooling ,13.2,66.0,8.4,Yes,N,57.0,62.0
+S0512,F,17,Rural,graduate,16.2,88.0,6.8,1,1,65.0,82.0
+S0050, f,15,Urban,school,14.7,77.0,5.9,yes,0,67.0,67.0
+S0417,female,18,Urban,School,12.3,89.0,6.5,Yes,N,90.0,87.0
+S0006,female,16,Urban,,6.5,85.0,7.4,Y,Y,94.0,-10
+S0018,Male,17,urban,Schooling ,3.8,67%,7.4,yes,no,54.0,55.0
+S0235,Male,17,urban,school,9.5,90.0,4.6,Yes,no,94.0,76.0
+S0442,Male,16,Urban,school,23.6,75.0,7.1,no,yes,83.0,84.0
+S0373,m,15,Urban,graduate,19.9,73.0,8.6,Yes,N,60.0,78.0
+S0436,MALE ,17,Urban,Graduate,8.0,99.0,6.9,Yes,No,72.0,77.0
+S0107,female,17,Urban,postgraduate,10.8,,7.0,Yes,1,68.0,73.0
+S0135,female,15,Rural,school,11.5,93.0,6.5,Y,0,73.0,84.0
+S0446,,17,rural,Graduate ,7.7,95.0,9.0,0,Y,82.0,76.0
+S0227,female,16,Rural,Schooling ,10.5 hrs,83%,7.4,Yes,1,90.0,89.0
+S0215, f,16,Rural,post graduate,10.7,82.0,7.5,yes,no,64.0,69.0
+S0191,FEMALE,15,Urban,school,12.1,100%,5.5,Y,No,52.0,68.0
+S0485,male,17,Urban,School,11.2,100.0,6.8,Y,no,82.0,89.0
+S0321,male,16,Urban,school,15.7,78%,6.3,no,No,98.0,89.0
+S0283,Female,17,Urban,Graduate ,20.1,91.0,7.4,yes,0,65.0,83.0
+S0030,MALE ,15,Rural,School,2.5,67%,5.9,1,Y,47.0,49.0
+S0170,male,17,urban,School,15.9,79.0,8.3,Y,N,80.0,86.0
+S0181,female,18,Urban,graduate,16.9,,7.1,Yes,0,38.0,62.0
+S0101,F,18,Urban,graduate,15.7,89%,6.0,yes,0,57.0,79.0
+S0198,MALE ,16,Urban,Graduate,9.9,84.0,8.1,yes,yes,49.0,69.0
+S0210, f,,Rural,Graduate,8.2,88.0,6.3,yes,No,90.0,86.0
+S0136,m,16 yrs,Rural,PG,9.7,75.0,7.8,Y,No,64.0,75.0
+S0516,Male,18,Urban,UG,,82.0,6.5,Yes,No,60.0,79.0
+S0472,female,15,Urban,Graduate,15.9,83%,7.2,Y,Yes,79.0,83.0
+S0199,MALE ,17,Urban,School,16.9,86%,7.3,Y,Yes,73.0,88.0
+S0374,m,16 yrs,Urban,SCHOOL,95,85.0,7.9,1,Yes,50.0,59.0
+S0167,Male,16,Rural,graduate,15.2,72%,7.6,No,Y,37.0,58.0
+S0424,Female,16,Rural,Graduate ,12.0,84.0,6.0,Y,Y,50.0,63.0
+S0137,F,17,Urban,SCHOOL,19.7,73.0,,Yes,No,50.0,250
+S0286,FEMALE,16,Rural,PG,7.4,98.0,6.3,Y,N,64.0,67.0
+S0336,,16,Urban,Graduate ,12.1,94.0,6.1,1,N,55.0,74.0
+S0397,Male,18,Urban,SCHOOL,,78.0,7.0,Y,Y,65.0,65.0
+S0414,M,17,rural,Postgraduate,14.5,84.0,7.2,yes,No,65.0,89.0
+S0132,female,15,Rural,Graduate,5.2,,6.3,,no,70.0,64.0
+S0040, f,17,Urban,School,18.6,69.0,7.5,yes,No,62.0,75.0
+S0216,male,16,Urban,SCHOOL,11.1,74.0,7.8,yes,N,74.0,76.0
+S0044,male,17,Rural,Graduate ,12.2,87.0,6.7,1,no,74.0,75.0
+S0055,Male,16,Rural,post graduate,8.6,86.0,6.5,yes,no,63.0,69.0
+S0519,m,17,Rural,UG,16.5,94.0,7.6,no,N,54.0,72.0
+S0300,M,16,Urban,Schooling ,4.7,71%,7.9,1,Yes,85.0,74.0
+S0502, f,16,Urban,UG,15.4,72.0,7.0,Y,Yes,68.0,84.0
+S0305, f,17 yrs,Rural,SCHOOL,17.6,79.0,6.2,Y,0,47.0,74.0
+S0036,M,18,rural,Postgraduate,6.1,78.0,,Yes,yes,68.0,70.0
+S0316,Female,17,Urban,school,12.6,71.0,6.4,Yes,1,38.0,57.0
+S0400,Male,16,Urban,Graduate,7.7,100.0,6.9,Y,Y,70.0,71.0
+S0310,M,17,Urban,Graduate,8.4,86.0,7.4,yes,0,57.0,65.0
+S0277,MALE ,17,Rural,UG,5.0 hrs,80.0,7.6,yes,N,70.0,69.0
+S0125,Female,16,Rural,school,13.4,60.0,6.7,yes,1,66.0,67.0
+S0143,MALE ,17,Rural,Schooling ,9.5,73.0,6.4,1,Y,40.0,51.0
+S0111,MALE ,17,Urban,Postgraduate,9.4,,7.4,yes,0,25.0,52.0
+S0324,female,16,Rural,Schooling ,11.2,83.0,8.3,yes,Yes,71.0,82.0
+S0333,male,16,Rural,UG,5.2,76%,8.3,1,0,77.0,69.0
+S0394,Female,16,Rural,Graduate ,7.9 hrs,95.0,6.2,1,no,70.0,73.0
+S0481,MALE ,15,urban,SCHOOL,17.1,75.0,6.4,0,1,34.0,64.0
+S0108,Female,17,Urban,school,1.1,,6.2,yes,Yes,,
+S0488, f,16 yrs,Rural,graduate,8.9,86.0,5.7,1,N,,64.0
+S0013,Female,15,Urban,Graduate,14.9,85.0,6.2,1,Yes,57.0,78.0
+S0273,male,16,Urban,Graduate ,2.5,63.0,8.7,yes,1,59.0,58.0
+S0048,Female,17,Urban,School,11.3 hrs,82%,7.2,Y,1,51.0,61.0
+S0443,Male,16,Rural,school,9.3,77.0,5.4,N,yes,87.0,79.0
+S0204,female,16,Urban,Graduate,10.2,75%,4.3,yes,0,34.0,42.0
+S0469,male,16 yrs,Rural,school,5.0,65.0,6.6,yes,no,68.0,69.0
+S0120,m,17,Urban,post graduate,15.8,73.0,,1,0,40.0,59.0
+S0022,Male,16,Urban,Graduate ,15.1,83.0,4.8,yes,Yes,70.0,76.0
+S0403,MALE ,16,Urban,school,10.0,87.0,7.3,yes,Yes,61.0,81.0
+S0435,M,18,urban,postgraduate,18.0,94%,5.7,no,no,63.0,75.0
+S0084,female,17,urban,PG,10.9,64.0,7.2,Yes,Yes,83.0,86.0
+S0131,F,17,Rural,post graduate,11.5,,7.9,Y,no,54.0,65.0
+S0489,,17,urban,post graduate,18.0 hrs,82%,5.1,1,No,68.0,88.0
+S0384,MALE ,16,Urban,school,5.5,82.0,6.7,1,Yes,98.0,82.0
+S0330,Female,15 yrs,Urban,graduate,8.1,86.0,7.6,1,Yes,68.0,77.0
+S0230,MALE ,,Urban,school,16.9,86.0,7.3,Y,N,43.0,64.0
+S0371,m,18,Urban,Schooling ,2.3,,6.1,yes,0,91.0,77.0
+S0287,MALE ,16,Urban,school,8.5,82%,6.0,yes,0,44.0,59.0
+S0124,Male,16 yrs,Urban,School,12.7,96%,7.0,Y,no,,74.0
+S0034,Female,15,Urban,postgraduate,9.9,,5.5,Y,N,72.0,72.0
+S0276,MALE ,16,Rural,SCHOOL,13.5,87%,9.7,Yes,no,54.0,65.0
+S0005,male,18,Rural,Postgraduate,14.2,85.0,,N,N,59.0,63.0
+S0412,male,17,Urban,School,7.5,96.0,8.8,Y,No,53.0,58.0
+S0020,Male,18,rural,PG,11.7,85%,6.6,Y,Yes,,66.0
+S0220,Female,16,Urban,School,9.6,82%,7.3,Yes,Y,63.0,75.0
+S0380,Male,18,rural,Graduate,11.6,88%,6.9,Yes,1,75.0,79.0
+S0068,m,17,Rural,Schooling ,9.9,,8.4,yes,No,72.0,70.0
+S0420, f,16,Rural,post graduate,15.2,70.0,7.3,yes,Y,50.0,75.0
+S0357,M,17,Urban,School,,73.0,7.0,1,No,70.0,78.0
+S0150,Male,18,Rural,Schooling ,19.7,,6.3,Yes,no,42.0,68.0
+S0225,,15,Rural,Graduate,5.0,76.0,,,N,53.0,60.0
+S0248,MALE ,17,Urban,Graduate,-4,80.0,7.8,no,0,61.0,55.0
+S0486,male,16,Rural,PG,19.0,86%,8.3,no,no,71.0,85.0
+S0152,male,17,Urban,UG,17.6,75%,7.3,,N,68.0,80.0
+S0273,male,16,Urban,Graduate ,2.5,63.0,8.7,yes,1,59.0,58.0
+S0318,Female,17,Rural,Graduate ,12.5,,5.4,yes,no,54.0,62.0
+S0508,m,15,Urban,Graduate,12.2,100.0,6.7,,0,74.0,85.0
+S0292,Male,16,Rural,school,9.3 hrs,73%,7.3,1,no,71.0,70.0
+S0234,female,16,Rural,Graduate ,15.2,92.0,6.1,N,N,79.0,81.0
+S0011,Female,15,Urban,school,11.6,73.0,5.5,Yes,N,,53.0
+S0280,MALE ,17,rural,Postgraduate,11.4,,7.1,no,N,57.0,66.0
+S0072,Male,,Urban,postgraduate,11.0 hrs,89.0,24,Yes,1,58.0,70.0
+S0253,M,15,Urban,school,9.9,73.0,7.9,Yes,no,70.0,60.0
+S0093,Female,17,Rural,School,13.7,79%,7.8,yes,yes,91.0,84.0
+S0429,Male,,Urban,School,14.2,,4.3,yes,Yes,49.0,61.0
+S0350,M,16,Rural,UG,14.8,83.0,7.3,Y,Y,56.0,82.0
+S0416,female,16 yrs,Urban,UG,13.0,81.0,6.0,1,No,57.0,64.0
+S0375, f,15 yrs,Urban,Graduate ,13.7,64.0,6.6,Y,yes,68.0,75.0
+S0401,female,16,Rural,postgraduate,7.5,69.0,6.9,Yes,yes,71.0,71.0
+S0193,FEMALE,17,Urban,Graduate,10.8,81.0,7.4,yes,N,63.0,71.0
+S0258,M,17,urban,Graduate ,14.2,94.0,7.7,yes,N,,76.0
+S0330,Female,15 yrs,Urban,graduate,8.1,86.0,7.6,1,Yes,68.0,77.0
+S0340,Female,17,Rural,Graduate,10.6,88.0,6.4,1,0,50.0,65.0
+S0073,Male,17,Rural,Graduate,8.3,64.0,,1,no,54.0,62.0
+S0196,MALE ,16,rural,Graduate ,10.0,78.0,5.9,1,N,65.0,64.0
+S0484, f,15,Rural,Schooling ,9.5,85%,6.5,0,1,45.0,60.0
+S0344,FEMALE,17,Urban,school,17.4,69.0,5.7,Y,no,,53.0
+S0138,M,16,Urban,graduate,19.9,96.0,7.2,,Yes,60.0,88.0
+S0495,m,17,Urban,postgraduate,6.3,76%,6.0,Yes,no,63.0,61.0
+S0261,F,18,Urban,Postgraduate,10.2,78%,7.6,Y,yes,62.0,82.0
+S0039,m,17,Rural,post graduate,,90.0,7.3,Y,0,64.0,72.0
+S0463,FEMALE,15,Urban,SCHOOL,16.3,100%,5.7,1,0,85.0,90.0
+S0202,FEMALE,15,Rural,postgraduate,11.7,72.0,7.6,1,no,59.0,67.0
+S0313,male,16,Urban,graduate,14.9 hrs,75.0,6.9,no,N,61.0,83.0
+S0291,female,16,rural,School,13.0,88.0,5.8,Y,1,81.0,81.0
+S0449, f,16,Rural,graduate,,70.0,4.0,no,0,49.0,46.0
+S0190,Male,17,Urban,Graduate,9.7,90.0,8.8,yes,1,79.0,73.0
+S0252,M,17,Rural,graduate,15.2,69%,7.8,No,1,87.0,87.0
+S0113,F,16,Urban,postgraduate,11.3,84.0,9.5,Yes,yes,55.0,70.0
+S0438,F,17,Urban,school,3.9,85.0,6.7,Y,0,51.0,55.0
+S0184,Female,16,Urban,School,,79%,6.8,1,N,75.0,86.0
+S0153,Female,15,Urban,post graduate,7.2,85.0,5.6,Y,N,58.0,57.0
+S0326,Male,17 yrs,Rural,UG,16.5,81.0,8.9,0,Yes,65.0,78.0
+S0045,Male,18,Rural,,11.8,100.0,7.6,1,N,50.0,71.0
+S0445,F,16,Urban,Graduate,15.0,86.0,7.0,Y,no,59.0,87.0
+S0007,M,16,Rural,Graduate,,70.0,,0,No,65.0,66.0
+S0251,male,,Urban,Schooling ,3.3,98%,6.7,1,Y,73.0,77.0
+S0076,Male,17,Urban,school,6.7,,7.4,Yes,no,72.0,73.0
+S0513, f,17,Urban,Graduate,7.7,73.0,,yes,no,76.0,71.0
+S0392,Male,18,Rural,post graduate,16.8,81.0,6.6,Y,0,74.0,96.0
+S0433,FEMALE,16,Urban,graduate,9.0 hrs,93%,7.7,Y,no,84.0,79.0
+S0069,Male,17,Urban,Schooling ,4.1 hrs,66.0,6.9,Y,no,49.0,49.0
+S0168,Male,17 yrs,Rural,School,4.0,85.0,6.7,no,no,78.0,72.0
+S0367,M,17,Rural,post graduate,11.6,100.0,7.6,No,N,59.0,72.0
+S0346,Male,17,Urban,Graduate,17.2,81.0,6.8,1,0,58.0,81.0
+S0399,M,17,Urban,Postgraduate,7.0,88.0,6.9,0,No,76.0,66.0
+S0186,Male,17,Urban,Schooling ,11.4,73.0,6.3,0,no,62.0,65.0
+S0349,M,17,rural,PG,12.2,89.0,7.3,yes,yes,74.0,83.0
+S0212,FEMALE,16,rural,SCHOOL,12.6,74.0,8.8,yes,N,79.0,79.0
+S0503, f,15,Urban,Schooling ,0.5,77.0,7.9,Y,no,90.0,79.0
+S0197,male,18 yrs,Urban,Postgraduate,13.7,82.0,7.7,1,N,64.0,81.0
+S0176,male,16,Rural,Graduate,,75.0,6.7,N,N,40.0,60.0

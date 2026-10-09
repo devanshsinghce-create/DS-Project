@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Student exam scores</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef1f4;--panel:#fff;--ink:#1c2733;--muted:#566474;--rule:#d3d9e0;--blue:#2f5d8a;--pen:#b8322a;--soft:#e3e9f0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181d;--panel:#1b2129;--ink:#e4e8ec;--muted:#98a4b1;--rule:#2d3640;--blue:#7ea6d6;--pen:#e0766b;--soft:#243040}}
+:root[data-theme="dark"]{--bg:#14181d;--panel:#1b2129;--ink:#e4e8ec;--muted:#98a4b1;--rule:#2d3640;--blue:#7ea6d6;--pen:#e0766b;--soft:#243040}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:960px;margin:0 auto;padding:40px 20px 72px}
+h1{font-size:2.3rem;line-height:1.15;margin:0 0 10px;letter-spacing:-.01em}
+h2{font-size:1.45rem;margin:0 0 6px;letter-spacing:-.005em}
+p{margin:0 0 12px;max-width:68ch}
+.lede{color:var(--muted);font-size:1.08rem}
+section{margin-top:56px;padding-top:28px;border-top:1px solid var(--rule)}
+.sub{color:var(--muted);margin-bottom:20px}
+.facts{display:flex;flex-wrap:wrap;gap:6px 32px;margin-top:22px}
+.facts div{min-width:120px}
+.facts b{display:block;font-size:1.7rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.facts span{color:var(--muted);font-size:.92rem}
+.log{border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:200px 1fr 1fr;gap:4px 20px;padding:12px 0;border-bottom:1px solid var(--rule)}
+.row b{font-weight:600}
+.row small{display:none;color:var(--muted)}
+.plots{display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:start}
+.panel{background:var(--panel);border:1px solid var(--rule);border-radius:4px;padding:16px}
+svg text{fill:var(--muted);font:12px "Source Sans 3",system-ui,sans-serif}
+.bars div.b{display:grid;grid-template-columns:150px 1fr 48px;gap:10px;align-items:center;margin:8px 0;font-size:.95rem}
+.track{height:14px;background:var(--soft);border-radius:2px;overflow:hidden}
+.fill{height:100%;background:var(--blue)}
+.val{text-align:right;font-variant-numeric:tabular-nums}
+.seg{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
+.seg button{font:inherit;font-size:.92rem;padding:5px 11px;border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:3px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+table{border-collapse:collapse;width:100%;max-width:560px;font-variant-numeric:tabular-nums}
+th,td{text-align:right;padding:8px 10px;border-bottom:1px solid var(--rule)}
+th:first-child,td:first-child{text-align:left;padding-left:0}
+th{font-weight:600;border-bottom:1px solid var(--ink)}
+tr.best td{font-weight:700}
+.est{display:grid;grid-template-columns:1fr 280px;gap:40px;align-items:start}
+.field{margin-bottom:16px}
+.field label{display:flex;justify-content:space-between;font-weight:600;margin-bottom:4px}
+.field output{font-weight:400;font-variant-numeric:tabular-nums;color:var(--muted)}
+input[type=range]{width:100%;accent-color:var(--blue)}
+select{font:inherit;width:100%;padding:7px 8px;background:var(--panel);color:var(--ink);border:1px solid var(--rule);border-radius:3px}
+.result{position:sticky;top:calc(16px + env(safe-area-inset-top,0px));text-align:center}
+.result svg{width:100%;max-width:260px;height:auto;overflow:visible}
+.result .num{fill:var(--ink);font:700 46px "Source Sans 3",system-ui,sans-serif}
+.result path{fill:none;stroke:var(--pen);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+.result p{color:var(--muted);font-size:.93rem;margin:6px auto}
+.note{color:var(--muted);font-size:.93rem;margin-top:14px}
+@media (max-width:760px){
+ h1{font-size:1.9rem}
+ .plots,.est{grid-template-columns:1fr;gap:28px}
+ .row{grid-template-columns:1fr}
+ .row small{display:inline}
+ .bars div.b{grid-template-columns:110px 1fr 44px}
+ .result{position:static}
+}
+</style>
+</head>
+<body>
+<main>
+<h1>What goes with a higher exam score?</h1>
+<p class="lede" id="lede"></p>
+<div class="facts" id="facts"></div>
+
+<section>
+<h2>Cleaning the raw file</h2>
+<p class="sub">Every problem below was counted by the program while it cleaned the data.</p>
+<div class="log" id="log"></div>
+</section>
+
+<section>
+<h2>Which factors move with the final score</h2>
+<p class="sub" id="plotsub"></p>
+<div class="plots">
+  <div class="panel"><svg id="scatter" viewBox="0 0 520 330" width="100%" role="img" aria-label="Scatter plot of weekly study hours against final score with a fitted line"></svg></div>
+  <div>
+    <p style="margin-bottom:8px"><b>Correlation with final score</b></p>
+    <div class="bars" id="corr"></div>
+  </div>
+</div>
+<div style="margin-top:32px">
+  <p style="margin-bottom:8px"><b>Average final score by group</b></p>
+  <div class="seg" id="seg"></div>
+  <div class="bars" id="groupbars"></div>
+</div>
+</section>
+
+<section>
+<h2>How well the models predict</h2>
+<p class="sub" id="modelsub"></p>
+<table id="models"></table>
+</section>
+
+<section>
+<h2>Estimate a score</h2>
+<p class="sub">Uses the linear regression weights from the analysis. Sliders stay inside the ranges found in the data.</p>
+<div class="est">
+  <div id="form"></div>
+  <div class="result" aria-live="polite">
+    <svg viewBox="0 0 190 110" role="img" aria-label="Estimated score">
+      <path d="M26 58 C18 24 80 6 122 14 C164 22 182 54 150 76 C118 98 44 96 22 66 C10 50 26 32 50 24"/>
+      <text class="num" id="estnum" x="95" y="68" text-anchor="middle">0</text>
+    </svg>
+    <p id="esttext"></p>
+  </div>
+</div>
+<p class="note">This is an estimate from patterns in a simulated practice dataset. It is not a forecast for any real student.</p>
+</section>
+</main>
+
+<script>
+const R = __DATA__;
+const $ = id => document.getElementById(id);
+const fmt = (v, d = 1) => Number(v).toFixed(d);
+const names = {study_hours_week:"Study hours per week", attendance:"Attendance", sleep_hours:"Sleep hours", previous_score:"Previous score", age:"Age", private_tuition:"Private tuition", internet_access:"Internet access", sleep_gap:"Hours away from 7.5 sleep", parent_graduate:"Parent: graduate", parent_postgraduate:"Parent: postgraduate"};
+
+$("lede").textContent = `A cleaned survey of ${R.rows_clean} students, used to see how study habits, attendance and background relate to the final mark. The data is simulated for practice.`;
+$("facts").innerHTML = [
+  [R.rows_raw, "rows in the raw file"],
+  [R.rows_clean, "rows after cleaning"],
+  [fmt(R.models[1].r2, 2), "R² of the linear model on unseen students"],
+  [fmt(R.models[1].mae, 1), "marks of typical error"]
+].map(([n, t]) => `<div><b>${n}</b><span>${t}</span></div>`).join("");
+
+$("log").innerHTML = R.log.map(l => `<div class="row"><b>${l.step}</b><div><small>Found: </small>${l.found}</div><div><small>Done: </small>${l.action}</div></div>`).join("");
+
+// scatter with least squares line
+(function(){
+  const pts = R.points, W = 520, H = 330, m = {l:46, r:12, t:12, b:40};
+  const xs = pts.map(p => p[0]), ys = pts.map(p => p[1]);
+  const xmax = Math.ceil(Math.max(...xs) / 5) * 5, ymin = 40, ymax = 100;
+  const sx = v => m.l + v / xmax * (W - m.l - m.r), sy = v => H - m.b - (v - ymin) / (ymax - ymin) * (H - m.t - m.b);
+  const n = pts.length, mx = xs.reduce((a,b)=>a+b)/n, my = ys.reduce((a,b)=>a+b)/n;
+  const b = xs.reduce((a,x,i)=>a+(x-mx)*(ys[i]-my),0) / xs.reduce((a,x)=>a+(x-mx)**2,0), a0 = my - b * mx;
+  let s = "";
+  for (let y = ymin; y <= ymax; y += 10) s += `<line x1="${m.l}" x2="${W-m.r}" y1="${sy(y)}" y2="${sy(y)}" stroke="var(--rule)"/><text x="${m.l-8}" y="${sy(y)+4}" text-anchor="end">${y}</text>`;
+  for (let x = 0; x <= xmax; x += 5) s += `<text x="${sx(x)}" y="${H-m.b+18}" text-anchor="middle">${x}</text>`;
+  s += pts.map(p => `<circle cx="${sx(p[0])}" cy="${sy(p[1])}" r="3" fill="var(--blue)" fill-opacity=".45"/>`).join("");
+  s += `<line x1="${sx(0)}" y1="${sy(a0)}" x2="${sx(xmax)}" y2="${sy(a0+b*xmax)}" stroke="var(--pen)" stroke-width="2.4"/>`;
+  s += `<text x="${(W+m.l)/2}" y="${H-6}" text-anchor="middle">Study hours per week</text><text transform="translate(12 ${H/2}) rotate(-90)" text-anchor="middle">Final score</text>`;
+  $("scatter").innerHTML = s;
+  $("plotsub").textContent = `Each dot is one student. The line adds about ${fmt(b,1)} marks for every extra weekly study hour, though the dots are spread widely around it.`;
+})();
+
+const bar = (label, v, max, shown) => `<div class="b"><span>${label}</span><div class="track"><div class="fill" style="width:${Math.max(0, v/max*100)}%"></div></div><span class="val">${shown}</span></div>`;
+$("corr").innerHTML = Object.entries(R.corr_final).sort((a,b)=>b[1]-a[1]).map(([k,v]) => bar(names[k], v, 1, fmt(v,2))).join("");
+
+const gname = {study:"Study hours", attendance:"Attendance", parent:"Parent education", tuition:"Tuition", internet:"Internet", gender:"Gender", area:"Area"};
+function showGroup(k){
+  $("seg").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b.dataset.k === k));
+  $("groupbars").innerHTML = R.groups[k].map(g => bar(`${g.label} (${g.n})`, g.mean, 100, fmt(g.mean,1))).join("");
+}
+$("seg").innerHTML = Object.keys(R.groups).map(k => `<button type="button" data-k="${k}">${gname[k]}</button>`).join("");
+$("seg").addEventListener("click", e => { if (e.target.dataset.k) showGroup(e.target.dataset.k); });
+showGroup("study");
+
+$("modelsub").textContent = `Trained on ${R.train_n} students and tested on ${R.test_n} the model had not seen. Five fold cross validation on all rows gave an average R² of ${fmt(R.cv_mean,2)}.`;
+const best = Math.max(...R.models.map(m => m.r2));
+$("models").innerHTML = `<tr><th>Model</th><th>MAE</th><th>RMSE</th><th>R²</th></tr>` + R.models.map(m => `<tr class="${m.r2===best?"best":""}"><td>${m.model}</td><td>${fmt(m.mae,2)}</td><td>${fmt(m.rmse,2)}</td><td>${fmt(m.r2,3)}</td></tr>`).join("");
+
+// predictor
+const sl = [["study_hours_week","Study hours per week",.5],["attendance","Attendance (%)",1],["sleep_hours","Sleep hours per night",.1],["previous_score","Previous score",1]];
+let html = sl.map(([k,l,step]) => { const [lo,hi,med] = R.ranges[k]; return `<div class="field"><label for="${k}">${l}<output id="o_${k}">${med}</output></label><input type="range" id="${k}" min="${Math.floor(lo)}" max="${Math.ceil(hi)}" step="${step}" value="${med}"></div>`; }).join("");
+const sel = (id, l, opts) => `<div class="field"><label for="${id}">${l}</label><select id="${id}">${opts.map(o=>`<option>${o}</option>`).join("")}</select></div>`;
+html += sel("private_tuition","Private tuition",["No","Yes"]) + sel("internet_access","Internet at home",["Yes","No"]) + sel("parent","Highest parent education",["School","Graduate","Postgraduate"]);
+$("form").innerHTML = html;
+
+function estimate(){
+  const v = k => Number($(k).value), c = R.coef;
+  const p = $("parent").value;
+  let y = R.intercept + c.study_hours_week*v("study_hours_week") + c.attendance*v("attendance")
+    + c.sleep_gap*Math.abs(v("sleep_hours")-7.5) + c.previous_score*v("previous_score")
+    + c.private_tuition*($("private_tuition").value==="Yes") + c.internet_access*($("internet_access").value==="Yes")
+    + c.parent_graduate*(p==="Graduate") + c.parent_postgraduate*(p==="Postgraduate");
+  y = Math.min(100, Math.max(0, y));
+  sl.forEach(([k]) => $("o_"+k).textContent = $(k).value);
+  $("estnum").textContent = Math.round(y);
+  const e = R.models[1].mae;
+  $("esttext").textContent = `out of 100. Most students in the test set landed within about ${fmt(e,0)} marks of their estimate, so ${Math.max(0,Math.round(y-e))} to ${Math.min(100,Math.round(y+e))} is a fair range.`;
+}
+$("form").addEventListener("input", estimate);
+estimate();
+</script>
+</body>
+</html>
